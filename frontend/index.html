@@ -1,12 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Smart Health Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <h1>Smart Health Dashboard</h1>
-  <div id="data-container"></div>
-  <script src="script.js"></script>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Smart Health Dashboard</h1>
+            <div class="user-profile">
+                <span class="username">Welcome, User</span>
+                <div class="profile-icon">👤</div>
+            </div>
+        </header>
+        
+        <div class="dashboard-grid">
+            <div class="card vital-card">
+                <h2>Vital Signs</h2>
+                <div class="vital-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="heart-rate">--</span>
+                        <span class="stat-label">Heart Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="blood-pressure">--/--</span>
+                        <span class="stat-label">Blood Pressure</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="oxygen-level">--%</span>
+                        <span class="stat-label">Oxygen Level</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card chart-card">
+                <h2>Activity Trends</h2>
+                <div class="chart-container" id="activity-chart">
+                    <!-- Chart will be rendered here -->
+                </div>
+            </div>
+            
+            <div class="card reminder-card">
+                <h2>Medication Reminders</h2>
+                <ul class="reminder-list" id="reminders">
+                    <!-- Reminders will be populated here -->
+                </ul>
+            </div>
+            
+            <div class="card appointment-card">
+                <h2>Upcoming Appointments</h2>
+                <div class="appointment-list" id="appointments">
+                    <!-- Appointments will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
